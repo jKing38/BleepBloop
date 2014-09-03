@@ -52,6 +52,7 @@ namespace BleepBloop
             {"whole", 2000},
             {"half", 1000},
             {"quarter", 500},
+            {"dotquarter", 750},
             {"eigth", 250},
             {"sixteenth", 125}
         };
@@ -59,9 +60,11 @@ namespace BleepBloop
         public void Play(string noteCode, string length, string volume)
         {
             string[] result = noteCode.Split(',');
-            int notelength = GetNoteLength(length);
+            int notelength;
             int volumeLevel = GetVolume(volume);
             int octave, frequency;
+
+            notelength = GetNoteLength(length);
             string noteName = result[0];
 
             if (int.TryParse(result[1], out octave))
