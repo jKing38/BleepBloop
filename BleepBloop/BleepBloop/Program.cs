@@ -10,30 +10,17 @@ namespace BleepBloop
     {
         static void Main(string[] args)
         {
-            //Frequency Of Notes
-                                             //Across: Octaves 0-7
-            int[,] notes = new int[12, 8] { { 16, 33, 65, 131, 262, 523, 1046, 2093 }, //C
-                                            { 17, 35, 69, 139, 277, 554, 1109, 2217 }, //C#
-                                            { 18, 37, 73, 147, 294, 587, 1175, 2349 }, //D
-                                            { 19, 39, 78, 155, 311, 622, 1244, 2489 }, //D#
-                                            { 21, 41, 82, 165, 330, 659, 1328, 2637 }, //E
-                                            { 22, 44, 87, 175, 349, 698, 1397, 2794 }, //F
-                                            { 23, 46, 92, 185, 370, 740, 1480, 2960 }, //F#
-                                            { 24, 49, 98, 196, 392, 784, 1568, 3136 }, //G
-                                            { 26, 52, 104, 208, 415, 831, 1661, 3322 },//G# 
-                                            { 27, 55, 110, 220, 440, 880, 1760, 3520 },//A
-                                            {29, 58, 116, 233, 466, 932, 1865, 3729 }, //A#
-                                            { 31, 62, 123, 245, 494, 988, 1975, 3951 } }; //B
+            Note mynote = new Note();
             Thread.Sleep(500);
             //C Major Scale
-            Beep.BeepBeep(500, notes[Note.C, 5], 500);
-            Beep.BeepBeep(500, notes[Note.D, 5], 500);
-            Beep.BeepBeep(500, notes[Note.E, 5], 500);
-            Beep.BeepBeep(500, notes[Note.F, 5], 500);
-            Beep.BeepBeep(500, notes[Note.G, 5], 500);
-            Beep.BeepBeep(500, notes[Note.A, 5], 500);
-            Beep.BeepBeep(500, notes[Note.B, 5], 500);
-            Beep.BeepBeep(500, notes[Note.C, 6], 500);
+            mynote.Play("C,5", "quarter", "pp");
+            mynote.Play("D,5", "quarter", "p");
+            mynote.Play("E,5", "quarter", "mp");
+            mynote.Play("F,5", "quarter", "mf");
+            mynote.Play("G,5", "quarter", "f");
+            mynote.Play("A,5", "quarter", "ff");
+            mynote.Play("B,5", "quarter", "f");
+            mynote.Play("C,6", "quarter", "pp");
         }
     }
 }
