@@ -25,19 +25,15 @@ namespace BleepBloop
                                             {29, 58, 116, 233, 466, 932, 1865, 3729 }, //A#
                                             { 31, 62, 123, 245, 494, 988, 1975, 3951 } }; //B
             Thread.Sleep(500);
-            Beep.BeepBeep(500, notes[0, 5], 500);
-            Beep.BeepBeep(500, notes[2, 5], 500);
-            Beep.BeepBeep(500, notes[4, 5], 500);
-            Beep.BeepBeep(500, notes[5, 5], 500);
-            Beep.BeepBeep(500, notes[7, 5], 500);
-            Beep.BeepBeep(500, notes[9, 5], 500);
-            Beep.BeepBeep(500, notes[11, 5], 500);
-            Beep.BeepBeep(500, notes[0, 6], 500);
-            //Beep.BeepBeep(500, notes[7, 5], 500);
-            //Beep.BeepBeep(500, notes[8, 5], 500);
-            //Beep.BeepBeep(500, notes[9, 5], 500);
-            
-            
+            //C Major Scale
+            Beep.BeepBeep(500, notes[Note.C, 5], 500);
+            Beep.BeepBeep(500, notes[Note.D, 5], 500);
+            Beep.BeepBeep(500, notes[Note.E, 5], 500);
+            Beep.BeepBeep(500, notes[Note.F, 5], 500);
+            Beep.BeepBeep(500, notes[Note.G, 5], 500);
+            Beep.BeepBeep(500, notes[Note.A, 5], 500);
+            Beep.BeepBeep(500, notes[Note.B, 5], 500);
+            Beep.BeepBeep(500, notes[Note.C, 6], 500);
         }
     }
 }
