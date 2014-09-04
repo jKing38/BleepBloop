@@ -39,6 +39,7 @@ namespace BleepBloop
 
         Dictionary<string, int> volume = new Dictionary<string, int>()
         {
+            {"rest", 0},
             {"pp", 100},
             {"p", 200},
             {"mp", 300},
@@ -61,10 +62,11 @@ namespace BleepBloop
         {
             string[] result = noteCode.Split(',');
             int notelength;
-            int volumeLevel = GetVolume(volume);
+            int volumeLevel;
             int octave, frequency;
 
             notelength = GetNoteLength(length);
+            volumeLevel = GetVolume(volume);
             string noteName = result[0];
 
             if (int.TryParse(result[1], out octave))
